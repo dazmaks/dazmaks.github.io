@@ -1,0 +1,90 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <base target="popup">
+    <title>dazmaks</title>
+</head>
+<body>
+    <style>
+* {
+    padding: 0;
+    margin: 0;
+}
+:root {
+    /* https://en.wikipedia.org/wiki/List_of_8-bit_computer_hardware_graphics#CGA */
+    --black: #000;
+    --low_blue: #00a;
+    --low_green: #0a0;
+    --low_cyan: #0aa;
+    --low_red: #a00;
+    --low_magenta: #a0a;
+    --low_yellow: #a50;
+    --low_gray: #aaa;
+    --high_gray: #555;
+    --high_blue: #55f;
+    --high_green: #5f5;
+    --high_cyan: #5ff;
+    --high_red: #f55;
+    --high_magenta: #f5f;
+    --high_yellow: #ff5;
+    --white: #fff;
+}
+@media (prefers-color-scheme: dark) {
+    body {color: var(--white); background: var(--black);}
+    a, a:hover, a:active, a:visited {color: var(--low_green);}
+    a:link:after, a:visited:after {color: var(--high_green);}
+    .cgaload {color: var(--low_gray);}
+}
+
+@media (prefers-color-scheme: light) {
+    body {color: var(--black); background: var(--white);}
+    a, a:hover, a:active, a:visited {color: var(--low_blue);}
+    a:link:after, a:visited:after {color: var(--high_blue);}
+    .cgaload {color: var(--high_gray);}
+}
+
+@font-face {
+    font-family: 'pxplus_ibm_vga8regular';
+    src: url('/PxPlus_IBM_VGA8.ttf') format('truetype');
+}
+a, a:hover, a:active, a:visited {text-decoration: none;}
+ul {list-style-type: none;}
+li::before {content: "- ";}
+
+body {
+    height: 100%;
+    display: flex;
+    font: 1.5rem pxplus_ibm_vga8regular;
+}
+
+@media (min-width: 800px) {
+    body {align-items: center; justify-content: center;}
+    a:link:after, a:visited:after {content:": \"" attr(href) "\"";}
+}
+
+.wrapper {
+    white-space: initial;
+    overflow: hidden;
+    max-width: 80ch;
+}
+
+.blink {animation: blinker .54s steps(1, end) infinite;}
+@keyframes blinker {50% {opacity: 0%;}}
+    </style>
+    <div class="wrapper">
+        <p class="cgaload">Booting from Floppy...</p>
+        <p class="cgaload">Started in 16-bit Real Mode</p>
+        <p class="cgaload">Loading kernel into memory</p>
+        <p>Welcome to my website.</p>
+        <ul>
+            <li><a href="https://github.com/dazmaks">GitHub</a></li>
+            <li><a href="https://gitlab.com/dazmaks">GitLab</a></li>
+            <li>Discord: dazmaks#9201</li>
+            <noscript><li>You need to enable javascript to load my projects</li></noscript>
+        </ul>
+        <p>><span class="blink">_</span></p>
+    </div>
+</body>
+</html>

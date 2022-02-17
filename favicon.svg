@@ -1,0 +1,11 @@
+<svg width="25" height="25" xmlns="http://www.w3.org/2000/svg">
+ <g id="Identicon" fill="#fff" stroke-width="0" >
+  <title>Identicon</title>
+  <rect height="5" width="5"/>
+  <rect height="5" width="5" x="20"/>
+  <rect height="15" width="5" x="10"/>
+  <rect height="10" width="5" y="15"/>
+  <rect height="5" width="15" y="5" x="5"/>
+  <rect height="10" width="5" y="15" x="20"/>
+ </g>
+</svg>
