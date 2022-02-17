@@ -12,7 +12,9 @@
     padding: 0;
     margin: 0;
 }
+
 :root {
+    --font-size: 1.5rem;
     /* https://en.wikipedia.org/wiki/List_of_8-bit_computer_hardware_graphics#CGA */
     --black: #000;
     --low_blue: #00a;
@@ -35,14 +37,14 @@
     body {color: var(--white); background: var(--black);}
     a, a:hover, a:active, a:visited {color: var(--low_green);}
     a:link:after, a:visited:after {color: var(--high_green);}
-    .cgaload {color: var(--low_gray);}
+    .load {color: var(--low_gray);}
 }
 
 @media (prefers-color-scheme: light) {
     body {color: var(--black); background: var(--white);}
     a, a:hover, a:active, a:visited {color: var(--low_blue);}
     a:link:after, a:visited:after {color: var(--high_blue);}
-    .cgaload {color: var(--high_gray);}
+    .load {color: var(--high_gray);}
 }
 
 @font-face {
@@ -56,7 +58,8 @@ li::before {content: "- ";}
 body {
     height: 100%;
     display: flex;
-    font: 1.5rem pxplus_ibm_vga8regular;
+    font: var(--font-size) pxplus_ibm_vga8regular;
+    line-height: var(--font-size);
 }
 
 @media (min-width: 800px) {
@@ -74,15 +77,15 @@ body {
 @keyframes blinker {50% {opacity: 0%;}}
     </style>
     <div class="wrapper">
-        <p class="cgaload">Booting from Floppy...</p>
-        <p class="cgaload">Started in 16-bit Real Mode</p>
-        <p class="cgaload">Loading kernel into memory</p>
+        <p class="load">Booting from Floppy...</p>
+        <p class="load">Started in 16-bit Real Mode</p>
+        <p class="load">Loading kernel into memory</p>
         <p>Welcome to my website.</p>
+        <p>My contacts:</p>
         <ul>
             <li><a href="https://github.com/dazmaks">GitHub</a></li>
             <li><a href="https://gitlab.com/dazmaks">GitLab</a></li>
             <li>Discord: dazmaks#9201</li>
-            <noscript><li>You need to enable javascript to load my projects</li></noscript>
         </ul>
         <p>><span class="blink">_</span></p>
     </div>
